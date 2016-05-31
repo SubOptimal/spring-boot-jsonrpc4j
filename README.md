@@ -16,9 +16,18 @@ java -jar target/JsonRPC-0.0.1-SNAPSHOT.jar
 
 ## send a JSON RPC request
 
+Linux/OSX
+
 ```shell
 curl -v -H "Content-Type: application/json" \
     -d '{"id":0, "method":"sayHelloWorld", "params":["John Doe"]}' \
+    http://localhost:8080/rpc/myservice
+```
+Windows
+
+```shell
+curl -v -H "Content-Type: application/json"  ^
+    -d "{\"id\":0, \"method\":\"sayHelloWorld\", \"params\":[\"John Doe\"]}" ^
     http://localhost:8080/rpc/myservice
 ```
 
